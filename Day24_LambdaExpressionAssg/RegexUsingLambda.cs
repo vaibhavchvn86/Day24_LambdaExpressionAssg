@@ -11,7 +11,7 @@ namespace Day24_LambdaExpressionAssg
         ///UC13 Refactor the Code to use Lambda Function
         /// </summary>
         public static string pattern = "^[A-Z][a-z]{2,}$";
-        public bool validateFirstName(string Name)
+        public bool validateLastName(string Name)
         {
             Regex name = new Regex(pattern);
             bool Fn = name.IsMatch(Name);
