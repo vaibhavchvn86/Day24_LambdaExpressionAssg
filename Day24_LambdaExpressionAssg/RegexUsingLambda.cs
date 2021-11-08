@@ -14,5 +14,6 @@ namespace Day24_LambdaExpressionAssg
             bool Fn = name.IsMatch(Name);
             return Fn;
         }
+        public static Func<string, bool> validateuserLname = Name => Regex.IsMatch(Name, pattern);
     }
 }
