@@ -11,7 +11,7 @@ namespace Day24_LambdaExpressionAssg
 
         /// <summary>
         ///UC13 Refactor the Code to use Lambda Function
-        /// Validates the email.
+       
         /// </summary>
         public static string pattern = "^[A-Z][a-z]{2,}$";
         public bool validateLastName(string Name)
@@ -21,13 +21,17 @@ namespace Day24_LambdaExpressionAssg
             return Fn;
         }
         public bool validateFirstName(string Name)
+        { 
+            Regex name = new Regex(pattern);
+            bool Fn = name.IsMatch(Name);
+            return Fn;
+        }
+        /// Validates the email.
         /// <param name="Email">The email.</param>
         /// <returns></returns>
         public bool validateEmail(string Email)
         {
-            Regex name = new Regex(pattern);
-            bool Fn = name.IsMatch(Name);
-            return Fn;
+           
             Regex mail = new Regex(Regex_Email);
             bool email = mail.IsMatch(Email);
             return email;
