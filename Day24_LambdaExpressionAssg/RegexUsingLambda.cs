@@ -12,6 +12,11 @@ namespace Day24_LambdaExpressionAssg
         /// </summary>
         public static string pattern = "^[A-Z][a-z]{2,}$";
         public bool validateLastName(string Name)
+        {
+            Regex name = new Regex(pattern);
+            bool Fn = name.IsMatch(Name);
+            return Fn;
+        }
         public bool validateFirstName(string Name)
         {
             Regex name = new Regex(pattern);
